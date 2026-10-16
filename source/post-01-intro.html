@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* Instagram portrait post: 1080 x 1350 (4:5) */
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; }
+  body {
+    position: relative;
+    background: #0A0A0C;
+    color: #F2EFE9;
+    font-family: "Manrope", sans-serif;
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+  }
+  .glow-a, .glow-b { position: absolute; border-radius: 50%; filter: blur(40px); }
+  .glow-a { width: 900px; height: 900px; right: -320px; top: -300px; background: radial-gradient(closest-side, rgba(255,107,61,.45), transparent); }
+  .glow-b { width: 760px; height: 760px; left: -300px; bottom: -280px; background: radial-gradient(closest-side, rgba(120,90,255,.28), transparent); }
+  .dots {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,.13) 2px, transparent 2px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 60% 35%, #000 20%, transparent 75%);
+  }
+  .top, main, .bottom { position: relative; }
+  .top { display: flex; align-items: center; gap: 22px; }
+  .top svg { width: 92px; height: 92px; }
+  .name { display: grid; line-height: 1; }
+  .name b { font-size: 46px; font-weight: 800; letter-spacing: -0.04em; }
+  .name span { margin-top: 8px; font-family: "JetBrains Mono", monospace; font-size: 18px; letter-spacing: .42em; color: #A6A39C; text-transform: uppercase; }
+  main { margin-top: auto; }
+  .eyebrow { font-family: "JetBrains Mono", monospace; font-size: 24px; letter-spacing: .16em; text-transform: uppercase; color: #FF8A63; }
+  h1 { margin-top: 28px; font-size: 118px; line-height: .98; font-weight: 800; letter-spacing: -0.05em; }
+  h1 em {
+    font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; font-size: 1.1em; letter-spacing: -0.01em;
+    background: linear-gradient(100deg, #FF6B3D, #FFB38F); -webkit-background-clip: text; background-clip: text; color: transparent;
+    padding-right: 8px;
+  }
+  .services { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 54px; }
+  .services span { padding: 14px 26px; border-radius: 999px; border: 2px solid rgba(255,255,255,.18); font-size: 26px; font-weight: 700; }
+  .bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 70px; padding-top: 34px; border-top: 2px solid rgba(255,255,255,.12);
+    font-size: 26px; color: #A6A39C; font-weight: 500;
+  }
+  .cta { display: inline-flex; align-items: center; gap: 14px; padding: 18px 32px; border-radius: 999px; background: #FF6B3D; color: #0A0A0C; font-weight: 800; }
+</style>
+</head>
+<body>
+  <div class="glow-a"></div><div class="glow-b"></div><div class="dots"></div>
+
+  <div class="top">
+    <svg viewBox="0 0 48 48">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF8A4C"/><stop offset="1" stop-color="#F0461F"/></linearGradient></defs>
+      <rect width="48" height="48" rx="14" fill="url(#g)"/>
+      <g fill="#0A0A0C"><path d="M19.5 12H36v4.8L20.8 31h7.7v5H12v-4.8L27.2 17h-7.7z"/><rect x="12" y="12" width="5" height="5" rx="1.2"/><rect x="31" y="31" width="5" height="5" rx="1.2"/></g>
+    </svg>
+    <div class="name"><b>Znex</b><span>Digital</span></div>
+  </div>
+
+  <main>
+    <p class="eyebrow">Hello, world</p>
+    <h1>We design &amp; build websites that help businesses <em>grow.</em></h1>
+    <div class="services"><span>Web Design</span><span>Development</span><span>E-commerce</span><span>SEO</span></div>
+  </main>
+
+  <div class="bottom">
+    <span>Pakistan · Working worldwide</span>
+    <span class="cta">Let's talk →</span>
+  </div>
+</body>
+</html>

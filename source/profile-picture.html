@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 1080px; height: 1080px; overflow: hidden; background: #F0461F; }
+  svg { display: block; width: 1080px; height: 1080px; }
+</style>
+</head>
+<body>
+<!-- Instagram profile picture: full-bleed brand gradient, mark centred so it survives the circle crop -->
+<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1080" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8A4C"/>
+      <stop offset="1" stop-color="#F0461F"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="0.3" cy="0.25" r="0.7">
+      <stop offset="0" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#g)"/>
+  <rect width="1080" height="1080" fill="url(#shine)"/>
+  <!-- Logo mark (48-unit artwork scaled 22.5x = 1080), Z occupies the centre 50% -->
+  <g transform="translate(540 540) scale(22.5) translate(-24 -24)" fill="#0A0A0C">
+    <path d="M19.5 12H36v4.8L20.8 31h7.7v5H12v-4.8L27.2 17h-7.7z"/>
+    <rect x="12" y="12" width="5" height="5" rx="1.2"/>
+    <rect x="31" y="31" width="5" height="5" rx="1.2"/>
+  </g>
+</svg>
+</body>
+</html>
