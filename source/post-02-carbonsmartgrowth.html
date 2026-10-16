@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* Instagram portrait post: 1080 x 1350 — project showcase */
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; }
+  body {
+    position: relative;
+    background: #070D0B;
+    color: #F2EFE9;
+    font-family: "Manrope", sans-serif;
+    padding: 80px 80px 70px;
+    display: flex;
+    flex-direction: column;
+  }
+  .glow-a, .glow-b { position: absolute; border-radius: 50%; filter: blur(50px); }
+  .glow-a { width: 1000px; height: 1000px; right: -380px; top: -360px; background: radial-gradient(closest-side, rgba(47,208,138,.32), transparent); }
+  .glow-b { width: 800px; height: 800px; left: -320px; bottom: -200px; background: radial-gradient(closest-side, rgba(255,107,61,.22), transparent); }
+  .dots {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,.11) 2px, transparent 2px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 70% 20%, #000 20%, transparent 75%);
+  }
+  header, .intro, .stage, footer { position: relative; }
+
+  header { display: flex; justify-content: space-between; align-items: center; }
+  .tag { font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: .16em; text-transform: uppercase; color: #A6A39C; display: flex; align-items: center; gap: 16px; }
+  .tag b { color: #2FD08A; font-weight: 500; }
+  .tag i { display: inline-block; width: 40px; height: 2px; background: rgba(255,255,255,.25); }
+  .pill { padding: 12px 22px; border-radius: 999px; border: 2px solid rgba(47,208,138,.45); color: #A6F0C9; font-size: 22px; font-weight: 700; }
+
+  .intro { margin-top: 56px; }
+  h1 { font-size: 104px; line-height: .98; font-weight: 800; letter-spacing: -0.055em; }
+  h1 em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; color: #2FD08A; }
+  .sub { margin-top: 22px; font-size: 32px; color: #B9B6AF; font-weight: 500; }
+
+  .stage { flex: 1; margin-top: 56px; }
+  .browser {
+    position: absolute; left: 0; top: 0;
+    width: 830px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #111;
+    border: 2px solid rgba(255,255,255,.12);
+    box-shadow: 0 50px 100px -30px rgba(0,0,0,.8);
+  }
+  .bar { display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 18px; background: #16181A; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .bar i { width: 13px; height: 13px; border-radius: 50%; }
+  .bar i:nth-child(1) { background: #FF5F57; } .bar i:nth-child(2) { background: #FEBC2E; } .bar i:nth-child(3) { background: #28C840; }
+  .bar span { margin-left: 16px; padding: 5px 16px; border-radius: 8px; background: rgba(255,255,255,.07); font-family: "JetBrains Mono", monospace; font-size: 15px; color: #A6A39C; }
+  .shot-desktop { display: block; width: 830px; height: 465px; object-fit: cover; object-position: top; }
+
+  .phone {
+    position: absolute; right: -10px; top: 250px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 40px;
+    background: #0B0B0E;
+    border: 2px solid rgba(255,255,255,.16);
+    box-shadow: 0 50px 90px -20px rgba(0,0,0,.9);
+  }
+  .phone::before { content: ""; position: absolute; top: 18px; left: 50%; width: 46px; height: 14px; margin-left: -23px; border-radius: 999px; background: #0B0B0E; z-index: 2; }
+  .shot-mobile { display: block; width: 100%; height: 310px; object-fit: cover; object-position: 50% 0; padding-top: 0; border-radius: 30px; }
+
+  footer {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 30px; border-top: 2px solid rgba(255,255,255,.12);
+  }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand svg { width: 58px; height: 58px; }
+  .brand div { display: grid; line-height: 1; }
+  .brand b { font-size: 30px; font-weight: 800; letter-spacing: -0.04em; }
+  .brand span { margin-top: 6px; font-family: "JetBrains Mono", monospace; font-size: 13px; letter-spacing: .42em; color: #A6A39C; }
+  .credit { font-size: 24px; color: #A6A39C; font-weight: 500; text-align: right; }
+  .credit strong { display: block; color: #F2EFE9; font-weight: 800; }
+</style>
+</head>
+<body>
+  <div class="glow-a"></div><div class="glow-b"></div><div class="dots"></div>
+
+  <header>
+    <p class="tag"><b>02</b><i></i>Project showcase</p>
+    <span class="pill">Consulting website</span>
+  </header>
+
+  <section class="intro">
+    <h1>Carbon<em>Smart</em><br>Growth</h1>
+    <p class="sub">Carbon markets, ESG advisory &amp; climate pathways.</p>
+  </section>
+
+  <section class="stage">
+    <div class="browser">
+      <div class="bar"><i></i><i></i><i></i><span>carbonsmartgrowth</span></div>
+      <img class="shot-desktop" src="shots/csg-desktop.png" alt="">
+    </div>
+    <div class="phone"><img class="shot-mobile" src="shots/csg-mobile.png" alt=""></div>
+  </section>
+
+  <footer>
+    <div class="brand">
+      <svg viewBox="0 0 48 48">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF8A4C"/><stop offset="1" stop-color="#F0461F"/></linearGradient></defs>
+        <rect width="48" height="48" rx="14" fill="url(#g)"/>
+        <g fill="#0A0A0C"><path d="M19.5 12H36v4.8L20.8 31h7.7v5H12v-4.8L27.2 17h-7.7z"/><rect x="12" y="12" width="5" height="5" rx="1.2"/><rect x="31" y="31" width="5" height="5" rx="1.2"/></g>
+      </svg>
+      <div><b>Znex</b><span>DIGITAL</span></div>
+    </div>
+    <p class="credit">Designed &amp; built by<strong>Znex Digital</strong></p>
+  </footer>
+</body>
+</html>
